@@ -1,0 +1,14 @@
+{
+  "id": "{44FE9725-7098-4EFE-A634-579BBA88CC93}",
+  "name": "TableauSummenlaempchen",
+  "type": 3,
+  "vendor": "Schrader IT",
+  "aliases":
+  [
+    "Tableau/Summenlämpchen"
+  ],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "SIB"
+}
