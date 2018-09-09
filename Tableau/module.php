@@ -56,7 +56,15 @@ class TableauSummenlaempchen extends IPSModule {
     public function ApplyChanges(){
         //Never delete this line!
         parent::ApplyChanges();
-        $this->SetTimerInterval("UpdateTableau", $this->ReadPropertyInteger("Refresh") * 1000);
+
+        $Tableau = $this->ReadPropertyInteger("TableauID");
+
+        if ($Tableau != ""){
+          $this->SetTimerInterval("UpdateTableau", $this->ReadPropertyInteger("Refresh") * 1000);
+        }
+        else{
+          $this->SetTimerInterval("UpdateTableau", 0);
+        }
     }
     public function MessageSink($TimeStamp, $SenderID, $Message, $Data) {
         // $this->LogMessage("MessageSink", "Message from SenderID ".$SenderID." with Message ".$Message."\r\n Data: ".print_r($Data, true));
