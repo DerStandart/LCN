@@ -84,7 +84,7 @@ class TableauSummenlaempchen extends IPSModule {
           $NewValue = $this->TransformValue($Value);
           $OldValue = GetValue($this->GetIDForIdent($Ident));
           $this->SendDebug("Tableau", "Ident: " . $Ident . " OldValue:" . $OldValue . " NewValue: " . $NewValue, 0);
-          if (intval($Value)) != intval($NewValue)){
+          if (intval($Value) != intval($NewValue)){
             SetValue($this->GetIDForIdent($Ident), $NewValue);
             $this->SendDebug("Tableau", "Value changed --> Set", 0);
           }
